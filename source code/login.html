@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloomy Flowers - User Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function validateLoginForm(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === '' || password === '') {
+                alert('Please fill in both fields.');
+                return false;
+            }
+
+            // Example of basic validation; you can expand this as needed
+            if (username.length < 3 || password.length < 6) {
+                alert('Username must be at least 3 characters and password must be at least 6 characters long.');
+                return false;
+            }
+
+            alert('Login successful!');
+            // Add actual authentication logic here
+            // For now, just redirect to a dummy page
+            window.location.href = 'dashboard.html'; // Replace with your actual dashboard or homepage
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products/Services Display</a></li>
+            <li><a href="cart.html">View Cart</a></li>
+            <li><a href="login.html">User Login</a></li>
+            <li><a href="contact.html">Contact Us / About Us</a></li>
+            <li><a href="privacy.html">Privacy Policy / Terms & Conditions</a></li>
+        </ul>
+
+        
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>User Login</h1>
+    </header>
+
+    <!-- Login Form -->
+    <section>
+        <form id="loginForm" action="login.php" method="POST" onsubmit="return validateLoginForm(event)">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        
+            <button type="submit">Login</button>
+        </form>
+        
+
+        <!-- Register Button -->
+        <p>Don't have an account? <a href="register.html">Register here</a></p>
+    </section>
+
+    <section>
+        
+
+        <h2>Why Do I Need to Log In?</h2>
+        <p>Logging in is necessary to access certain features, services, or content that are only available to registered users. By logging in, you can:</p>
+        <ul>
+            <li>View your order history and track your shipments</li>
+            <li>Save your payment and shipping information for faster checkout</li>
+            <li>Receive personalized recommendations and offers</li>
+            <li>Participate in loyalty programs and earn rewards</li>
+            <li>Access exclusive content, such as premium articles or videos</li>
+            <li>Manage your account settings and preferences</li>
+        </ul>
+
+        <h2>How Do I Log In?</h2>
+        <p>To log in, you typically need to enter your username and password in the designated fields on the login page. If you have forgotten your password, you can usually reset it by clicking on the "Forgot Password" link and following the instructions. Once you have entered your credentials, click the "Login" button to access your account.</p>
+
+        <h2>Benefits of Logging In</h2>
+        <p>Logging in provides several benefits, including:</p>
+        <ul>
+            <li>Convenience: Logging in saves you time and effort by allowing you to access your account quickly and easily.</li>
+            <li>Personalization: By logging in, you can receive personalized recommendations and offers tailored to your interests and preferences.</li>
+            <li>Security: Logging in helps to protect your account and personal information from unauthorized access.</li>
+            <li>Exclusive access: Logging in grants you access to exclusive content, services, or features that are not available to non-registered users.</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>About Bloomy Flowers</h3>
+            <p>Bloomy Flowers is dedicated to bringing you the freshest and most beautiful flowers directly from the garden to your doorstep. We offer a wide range of floral arrangements perfect for any occasion.</p>
+        </div>
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">View Cart</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: support@bloomyflowers.com</p>
+            <p>Phone: +123-456-7890</p>
+            <p>Address: 123 Flower Street, Blossom City, FL</p>
+        </div>
+        <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="icons/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Bloomy Flowers. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
